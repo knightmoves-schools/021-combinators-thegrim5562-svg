@@ -3,20 +3,40 @@
 <head>
     <title>Combinators</title>
     <style>
-        
+        /* descendant selector (space) */
+        div p {
+            color: orange;
+        }
+
+        /* child selector (>) */
+        div > p {
+            background-color: yellow;
+        }
+
+        /* adjecent sibling selector (+)*/
+        div + p {
+            background-color: red;
+        }
+
+        /* general sibling selector (~) */
+        div ~ p {
+            color: yellow;
+        }
+
     </style>
 </head>
 
 <body>
-    <span>
-        <div>First</div>
-        <article>
-            <div>Second</div>
-        </article>
-        <div>Third</div>
-    </span>
-    <div>Fourth</div>
-    <div>Fifth</div>
+    <div>
+        <p>inside the div</p>
+        <section>
+            <p>Inside of the section so its not highlighted</p>
+        </section>
+        <p>inside the div</p>
+    </div>
+    
+    <p>Fourth is not in a section</p>
+    <p>Fifth</p>
 </body>
 
 </html>
