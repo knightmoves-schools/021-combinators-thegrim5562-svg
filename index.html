@@ -4,34 +4,39 @@
     <title>Combinators</title>
     <style>
         /* descendant selector (space) */
-        span div  {
+        div p {
             color: orange;
         }
+
         /* child selector (>) */
-        span > div {
-            text-size: large;
+        div > p {
+            font-size: large;
         }
+
         /* adjecent sibling selector (+)*/
-        span + div {
-            background-color: red;
+        div + p {
+            color: red;
         }
+
         /* general sibling selector (~) */
-        span ~ div {
+        div ~ p {
             color: yellow;
         }
+
     </style>
 </head>
 
 <body>
-    <span>
-        <div>First</div>
-        <article>
-            <div>Second</div>
-        </article>
-        <div>Third</div>
-    </span>
-    <div>Fourth</div>
-    <div>Fifth</div>
+    <div>
+        <p>inside the div</p>
+        <section>
+            <p>Inside of the section so its not highlighted</p>
+        </section>
+        <p>inside the div</p>
+    </div>
+    
+    <p>Fourth is not in a section</p>
+    <p>Fifth</p>
 </body>
 
 </html>
